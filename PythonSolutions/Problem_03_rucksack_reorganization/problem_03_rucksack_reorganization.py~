@@ -1,0 +1,23 @@
+##########################################################################
+##########################################################################
+#
+# File Name:
+#            problem_03_rucksack_reorganization.py
+#
+# Descrption:
+#            Problem 3 of the 2022 Advent of code, solved in python
+# Author:
+#            Alex Hahn
+#
+##########################################################################
+##########################################################################
+
+rucksack_file = open("rucksack.txt", "r")
+rucksack_data = rucksack_file.read()
+
+rucksacks  = rucksack_data.split("\n")
+
+repeats = []
+
+for sack in rucksacks:
+    print(len(sack))
