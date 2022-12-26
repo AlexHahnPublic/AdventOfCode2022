@@ -1,0 +1,42 @@
+##########################################################################
+##########################################################################
+#
+# File Name:
+#            problem_02_rock_paper_scissors.py
+#
+# Descrption:
+#            Problem 2 of the 2022 Advent of code, solved in python
+# Author:
+#            Alex Hahn
+#
+##########################################################################
+##########################################################################
+
+
+strategy_file = open("strategy.txt", "r")
+strategy_data = strategy_file.read()
+
+strategy_rows  = strategy_data.split("\n")
+
+
+# There are only 9 possible in the cartesion product of two length three vectors
+# We will define a dict where the keys are the two tuples of the 9 combinations and the value is the score
+
+scores = {
+("A","X"): 4, # Tie (3)  + Rock (1)     = 4
+("A","Y"): 8, # Win (6)  + Paper (2)    = 8
+("A","Z"): 3, # Loss (0) + Scissors (3) = 3
+("B","X"): 1, # Loss (0) + Rock (1)     = 1
+("B","Y"): 5, # Tie (3)  + Paper (2)    = 5
+("B","Z"): 9, # Win (6)  + Scissors (3) = 9
+("C","X"): 7, # Win (6)  + Rock (1)     = 7
+("C","Y"): 2, # Loss (0) + Paper (2)    = 2
+("C","Z"): 3, # Tie (3)  + Scissors (3) = 6
+}
+
+total = 0
+
+print("test")
+
+for row in strategy_rows:
+    print(row)
